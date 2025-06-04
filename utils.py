@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
+import re
 
 #fonctions de visualisation
 def boxplot(data, x,y):
@@ -26,4 +27,10 @@ def histogram(data, x):
     plt.show()
     
     
-
+# Define function to extract titles from passenger names
+def get_title(name):
+    title_search = re.search(r' ([A-Za-z]+)\.', name)
+    # If the title exists, extract and return it.
+    if title_search:
+        return title_search.group(1)
+    return ""

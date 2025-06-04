@@ -27,4 +27,4 @@ print("Confusion Matrix:\n", confusion_matrix(train['Survived'], predictions_tra
 print("Classification Report:\n", classification_report(train['Survived'], predictions_train))
 
 #output = pd.DataFrame({'PassengerId': test.PassengerId, 'Survived': predictions})
-#output.to_csv('logisticReg.csv', index=False)
+#output.to_csv('data/submissions/logisticReg.csv', index=False)
